@@ -8,11 +8,21 @@ function initialSetup() {
 
   initialSetup();
 
+  function initialSetup1() {
+    if (document.getElementById("gul") != null) {
+      setTimeout(function() {
+        document.getElementById('gul').style.display = 'block';
+      }, 3000);
+    }
+  }
+
+  initialSetup1();
+
   function initialSetup2() {
     if (document.getElementById("blue") != null) {
       setTimeout(function() {
         document.getElementById('blue').style.display = 'block';
-      }, 26000);
+      }, 27000);
     }
   }
 
@@ -32,7 +42,7 @@ function initialSetup() {
     if (document.getElementById("green") != null) {
       setTimeout(function() {
         document.getElementById('green').style.display = 'block';
-      }, 13000);
+      }, 14000);
     }
   }
 
@@ -48,6 +58,15 @@ function initialSetup() {
 
   initialSetup5()
 
+  function initialSetup6() {
+    if (document.getElementById("purple") != null) {
+      setTimeout(function() {
+        document.getElementById('purple').style.display = 'block';
+      }, 12500);
+    }
+  }
+
+  initialSetup6()
 
 
   var elem = document.documentElement;
@@ -70,3 +89,27 @@ function initialSetup() {
             document.msExitFullscreen();
           }
         }
+
+
+
+
+
+        var typeWriter = document.getElementById('type-writer');
+var dataText = typeWriter.getAttribute('data-text');
+
+var count = 0;
+var dataTextLength = dataText.length;
+
+var setText = function () {
+  setTimeout(function () {
+    typeWriter.textContent = typeWriter.textContent + dataText.charAt(count);
+    count++;
+    if (count <= dataTextLength) {
+      setText();
+    }
+  }, 50);
+}
+
+window.onload = () => {
+  setText()
+}
