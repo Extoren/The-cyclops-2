@@ -28,7 +28,15 @@ function initialSetup() {
   
   initialSetup3()
 
+  function initialSetup4() {
+    if (document.getElementById("green") != null) {
+      setTimeout(function() {
+        document.getElementById('green').style.display = 'block';
+      }, 13500);
+    }
+  }
 
+  initialSetup4()
 
 
 
