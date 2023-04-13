@@ -32,12 +32,21 @@ function initialSetup() {
     if (document.getElementById("green") != null) {
       setTimeout(function() {
         document.getElementById('green').style.display = 'block';
-      }, 13500);
+      }, 13000);
     }
   }
 
   initialSetup4()
 
+  function initialSetup5() {
+    if (document.getElementById("pink") != null) {
+      setTimeout(function() {
+        document.getElementById('pink').style.display = 'block';
+      }, 13500);
+    }
+  }
+
+  initialSetup5()
 
 
 
