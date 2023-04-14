@@ -94,13 +94,13 @@ function initialSetup() {
 
 
 
-        var typeWriter = document.getElementById('type-writer');
-var dataText = typeWriter.getAttribute('data-text');
+let typeWriter = document.getElementById('type-writer');
+let dataText = typeWriter.getAttribute('data-text');
 
-var count = 0;
-var dataTextLength = dataText.length;
+let count = 0;
+let dataTextLength = dataText.length;
 
-var setText = function () {
+let setText = function () {
   setTimeout(function () {
     typeWriter.textContent = typeWriter.textContent + dataText.charAt(count);
     count++;
