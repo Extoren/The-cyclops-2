@@ -113,3 +113,13 @@ var setText = function () {
 window.onload = () => {
   setText()
 }
+
+
+//Text / white - red
+const paragraph = document.getElementById("type-writer");
+const duration = 23000;
+const color = "red";
+
+setTimeout(() => {
+  paragraph.style.color = color;
+}, duration);
